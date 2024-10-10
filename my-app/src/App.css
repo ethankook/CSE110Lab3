@@ -116,3 +116,15 @@
   left: 0;
   padding: 10px;
  }
+ .ToggleThemeButton button{
+  border-radius: 5px;
+  background-color: rgb(64, 154, 184);
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+ }
+ .ToggleThemeButton button:hover{
+  background-color: rgb(106, 175, 198);
+  cursor: pointer;
+ }

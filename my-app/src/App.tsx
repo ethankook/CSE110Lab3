@@ -4,9 +4,11 @@ import './App.css';
 import { ClickCounter } from "./hooksExercise";
 import React, { useState, useEffect, useContext } from 'react';
 import {ThemeContext, themes} from "./themeContext";
+import ToggleTheme from "./ToggleThemeExercise";
 
 function App() {
   const [favorites, setFavorites] = useState<string[]>([]);
+  const [currentTheme, setCurrentTheme] = useState(themes.light); 
 
   const toggleFavorite = (title: string) => {
     if (favorites.includes(title)) {
@@ -16,13 +18,11 @@ function App() {
     }
   };
 
-  useEffect(() => {
-    console.log(favorites);
-  }, [favorites]);
 
+const theme = useContext(ThemeContext);
  return (
-
-   <div className={`app-container`}>
+  <ThemeContext.Provider value={currentTheme}> {}
+   <div className={`app-container ${currentTheme === themes.light ? 'light-theme' : 'dark-theme'}`}>
          <form className="note-form">
        <div><input placeholder="Note Title"></input></div>
 
@@ -35,10 +35,10 @@ function App() {
                 <option value="Other">Other</option>
       </select>
       </div>
-
        <div><button type="submit">Create Note</button></div>
       </form>
       <div className="favorites-list">
+        
         <h2>Favorites</h2>
         {favorites.map((favorite, index) => (
           <p key={index}>{favorite}</p>
@@ -59,12 +59,13 @@ function App() {
            <p> {note.content} </p>
            <p> {note.label} </p>
          </div>
+         
        ))}
-       <div className="App">
-          <ClickCounter/>
-       </div>
+         <div className="ToggleThemeButton"><ToggleTheme/></div>
      </div>
    </div>
+  </ThemeContext.Provider>
+
 
 
  );
