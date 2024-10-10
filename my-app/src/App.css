@@ -10,8 +10,8 @@
  }
  .note-form {
   display: "flex";
-  border: 1px solid black;
   flex-direction: column;
+
  }
  body {
   margin: 20px;
@@ -35,6 +35,7 @@
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-auto-rows: minmax(250px, auto);
   gap: 20px;
+  margin-left: 50px;
  }
  
  .note-item {
@@ -69,6 +70,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 250px;
  }
  
  textarea,
@@ -108,4 +110,9 @@
   color: white;
  }
  
- 
+ .favorites-list{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+ }
