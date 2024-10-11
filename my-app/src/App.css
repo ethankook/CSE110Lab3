@@ -145,6 +145,9 @@
     color: black;
     border: 3px solid #ccc;
   }
+  .favorites-list.light-theme h2{
+    color: red;
+  }
   .favorites-list.dark-theme{
     color: white;
     border: 3px solid rgb(64, 154, 184);
