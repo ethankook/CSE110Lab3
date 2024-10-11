@@ -26,6 +26,8 @@
  }
  body {
   margin: 20px;
+  background-color: lightgrey;
+  transition: background-color 0.2s, color 0.2s;
  }
  
  .app-container {
@@ -51,25 +53,33 @@
  .note-item {
   display: flex;
   flex-direction: column;
-  border: 3px solid #ccc;
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
  }
+
+ .note-item.light-theme {
+  border: 3px solid #ccc;
+ }
+  .note-item.dark-theme {
+  border: 3px solid white;
+  }
  
  .notes-header {
   display: flex;
   justify-content: flex-end;
+  transition: background-color 0.2s, color 0.2s;
  }
  
  .notes-header button {
   font-size: 16px;
-  color:rgb(64, 154, 184);;
   background: transparent;
   border: none;
   cursor: pointer;
   max-width: fit-content;
+  transition: background-color 0.2s, color 0.2s;
+
  }
  
  h2 {
@@ -120,12 +130,25 @@
   color: white;
  }
  
+
+ 
  .favorites-list{
   position: fixed;
   bottom: 0;
   left: 0;
   padding: 10px;
+  color: red;
+  margin:  25px;
+  transition: background-color 0.2s, color 0.2s;
  }
+  .favorites-list.light-theme{
+    color: black;
+    border: 3px solid #ccc;
+  }
+  .favorites-list.dark-theme{
+    color: white;
+    border: 3px solid rgb(64, 154, 184);
+  }
  .ToggleThemeButton button{
   border-radius: 5px;
   background-color: rgb(64, 154, 184);
@@ -138,3 +161,17 @@
   background-color: rgb(106, 175, 198);
   cursor: pointer;
  }
+ .notes-header.light-theme{
+  color:#000000
+ }
+ .notes-header.dark-theme{
+  color: white;
+ }
+ .ToggleThemeButtonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+
