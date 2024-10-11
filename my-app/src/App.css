@@ -69,7 +69,7 @@
  .notes-header {
   display: flex;
   justify-content: flex-end;
-  transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0s, color 0.2s;
  }
  
  .notes-header button {
