@@ -1,6 +1,6 @@
 // App.tsx
-import { Label, Note } from "./types"; // Import the Label type from the appropriate module
-import { dummyNotesList } from "./constant"; // Import the dummyNotesList from the appropriate module
+import { Label, Note } from "./types"; 
+import { dummyNotesList } from "./constant"
 import './App.css';
 import React, { useState, useEffect, useContext } from 'react';
 import { ThemeContext, themes } from "./themeContext";
@@ -65,7 +65,7 @@ function App() {
   return (
     <ThemeContext.Provider value={{ currentTheme, toggleTheme }}>
       <div className={`app-container ${currentTheme === themes.light ? 'light-theme' : 'dark-theme'}`}>
-        {/* Highlighted changes start here */}
+        {}
         <div className="form-container">
           <form className="note-form" onSubmit={createNoteHandler}>
             <div>
