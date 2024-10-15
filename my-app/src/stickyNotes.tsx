@@ -122,9 +122,9 @@ export const StickyNotes = () => {
                   {favorites.includes(note.title) ? '❤️' : '♡'}
                 </button>
               </div>
-              <h2 contentEditable="true" onBlur={(event) => updateNoteTitle(note.id, event.currentTarget.textContent || '')}>{note.title} </h2>
-              <p contentEditable="true" >{note.content}</p>
-              <p contentEditable="true">{note.label}</p>
+              <h2 contentEditable="true" suppressContentEditableWarning={true} onBlur={(event) => updateNoteTitle(note.id, event.currentTarget.textContent || '')}>{note.title} </h2>
+              <p contentEditable="true" suppressContentEditableWarning={true} >{note.content}</p>
+              <p contentEditable="true" suppressContentEditableWarning={true} >{note.label}</p>
             </div>
           ))}
         </div>
